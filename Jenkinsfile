@@ -18,9 +18,9 @@ pipeline {
             }
         }
 
-        stage('CONSUL TEMPLATE') {
-            steps { sh 'consul-template -vault-addr "$VAULT_ADDR" -config "jenkins_config.hcl" -once -vault-retry-attempts=1 -vault-renew-token=false' }
-        }
+       // stage('CONSUL TEMPLATE') {
+       //     steps { sh 'consul-template -vault-addr "$VAULT_ADDR" -config "jenkins_config.hcl" -once -vault-retry-attempts=1 -vault-renew-token=false' }
+      //  }
 
         stage('RUN GROOVY on master') {
             steps {
