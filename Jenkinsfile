@@ -7,7 +7,7 @@ pipeline {
         TAG_NAME = 'latest'
         REGISTRY_CREDENTIALS_ID = 'docker-registry-id'
     }
-    agent { }
+    agent { label "jnlp-slave-java" }
     stages {
 
         stage('RAW CONFIG HANDLING') {
