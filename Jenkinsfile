@@ -8,8 +8,6 @@ pipeline {
         REGISTRY_CREDENTIALS_ID = 'docker-registry-id'
     }
 
-    agent { label "do-not-use-master" }
-
     stages {
 
         stage('RAW CONFIG HANDLING') {
